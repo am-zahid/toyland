@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ToyLand — Fun Toys for Every Kid</title>
+<meta name="description" content="A colorful toy store website with popular toys, categories and a simple cart.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <div class="logo">🧸 Toy<span>Land</span></div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#toys">Toys</a>
+    <a href="#categories">Categories</a>
+    <a href="#about">About</a>
+  </nav>
+  <button class="cart" onclick="toggleCart()">🛒 Cart <b id="cartCount">0</b></button>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="heroText">
+    <p class="badge">✨ BIG FUN • HAPPY KIDS</p>
+    <h1>Find a toy that<br><span>sparks joy.</span></h1>
+    <p>Discover colorful, creative and exciting toys made for playtime, imagination and big smiles.</p>
+    <a class="heroBtn" href="#toys">Shop Toys →</a>
+  </div>
+  <div class="heroToy">🧸</div>
+</section>
+
+<section class="section" id="categories">
+  <div class="sectionHead"><div><p class="mini">EXPLORE</p><h2>Shop by category</h2></div></div>
+  <div class="categories">
+    <button onclick="filterToys('all')">🌈 All Toys</button>
+    <button onclick="filterToys('plush')">🧸 Plush</button>
+    <button onclick="filterToys('vehicles')">🚗 Vehicles</button>
+    <button onclick="filterToys('learning')">🧩 Learning</button>
+    <button onclick="filterToys('outdoor')">⚽ Outdoor</button>
+  </div>
+</section>
+
+<section class="section" id="toys">
+  <div class="sectionHead">
+    <div><p class="mini">OUR PICKS</p><h2>Popular toys</h2></div>
+    <select id="sort" onchange="sortToys()"><option value="default">Sort toys</option><option value="low">Price: Low to High</option><option value="high">Price: High to Low</option></select>
+  </div>
+  <div class="products" id="products"></div>
+</section>
+
+<section class="banner">
+  <div><p class="mini">PLAY MORE. SMILE MORE.</p><h2>Make every day a little more playful.</h2><p>Fun toys for birthdays, gifts and everyday adventures.</p></div>
+  <div class="bannerEmoji">🎁 🪁 🚀</div>
+</section>
+
+<section class="about" id="about">
+  <p class="mini">ABOUT TOYLAND</p>
+  <h2>Small toys. Big imaginations.</h2>
+  <p>We believe the best toys turn ordinary moments into adventures. ToyLand is a demo store designed with a bright, modern and kid-friendly shopping experience.</p>
+</section>
+</main>
+
+<div class="cartPanel" id="cartPanel">
+  <div class="cartTop"><h2>Your Cart</h2><button onclick="toggleCart()">✕</button></div>
+  <div id="cartItems"></div>
+  <div class="cartBottom"><strong>Total: Rs. <span id="cartTotal">0</span></strong><button onclick="checkout()">Checkout</button></div>
+</div>
+<div class="overlay" id="overlay" onclick="toggleCart()"></div>
+
+<footer>© 2026 ToyLand · Made for happy playtime 🧸</footer>
+<script src="script.js"></script>
+</body>
+</html>
