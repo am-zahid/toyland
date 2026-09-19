@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToyLand</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to ToyLand</h1>
+        <p>Click on any toy to view its complete details</p>
+    </header>
+
+    <main class="toy-container">
+        <div class="toy-card" onclick="openProductDetail(1)">
+            <img src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=300" alt="Super Hero Figure">
+            <h3>Super Hero Figure</h3>
+            <p class="price">$15.00</p>
+            <button class="view-btn">View Details</button>
+        </div>
+
+        <div class="toy-card" onclick="openProductDetail(2)">
+            <img src="https://images.unsplash.com/photo-1594787318286-3d835c1d207f?w=300" alt="Remote Control Car">
+            <h3>Remote Control Car</h3>
+            <p class="price">$25.00</p>
+            <button class="view-btn">View Details</button>
+        </div>
+
+        <div class="toy-card" onclick="openProductDetail(3)">
+            <img src="https://images.unsplash.com/photo-1559454403-b8fb88521f11?w=300" alt="Soft Teddy Bear">
+            <h3>Soft Teddy Bear</h3>
+            <p class="price">$10.00</p>
+            <button class="view-btn">View Details</button>
+        </div>
+    </main>
+
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div class="modal-body">
+                <img id="modal-img" src="" alt="Toy Image">
+                <div class="modal-info">
+                    <h2 id="modal-title"></h2>
+                    <p id="modal-price" class="modal-price"></p>
+                    <p id="modal-desc"></p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
